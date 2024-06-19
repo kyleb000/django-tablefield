@@ -3,7 +3,7 @@
         <thead>
         <tr>
             {% for column in table_header %}
-                <th {% if column.colspan %}colspan="{{ column.colspan }}"{% endif %} {% if column.rowspan %}rowspan="{{ column.rowspan }}"{% endif %} {% if column.className %}class="{{ column.className }}"{% endif %}>
+                <th {% if column.colspan %}colspan="{{ column.colspan }}"{% endif %} {% if column.rowspan %}rowspan="{{ column.rowspan }}"{% endif %} {% if column.className %}class="{{ column.className }} test"{% endif %}>
                     {% if column.value.strip %}
                         {% if html_renderer %}
                             {{ column.value.strip|safe|linebreaksbr }}
@@ -50,6 +50,9 @@
 .tablefield__table td.htRight,
 .tablefield__table th.htRight {
   text-align: right;
+}
+.test {
+    background: black;
 }
 .tablefield__table td.htLeft,
 .tablefield__table th.htLeft {
